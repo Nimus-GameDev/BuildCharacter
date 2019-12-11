@@ -1,0 +1,29 @@
+<ion-content>
+
+    <ion-card color="primary" (touchstart)="active(card)" *ngFor="let card of getPersons() " class="character">
+
+        <div class="character-image">
+            <img src="https://c4.wallpaperflare.com/wallpaper/918/556/914/anime-irl-2d-anime-girls-wallpaper-preview.jpg" />
+        </div>
+        <ion-card-header>
+            <ion-card-title>Nome do Personagem</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content *ngIf="card.active">
+            <div class="character-info">
+                <ul>
+                    <li>Nome: {{card.id}}</li>
+                    <li>Idade: </li>
+                    <li>Peso: </li>
+                    <li>Sexo: </li>
+                    <li>Raça: </li>
+                </ul>
+            </div>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-fab-button color="dark" class="create-character" routerLink="/create-character">
+        <ion-icon name="home"></ion-icon>
+    </ion-fab-button>
+
+</ion-content>

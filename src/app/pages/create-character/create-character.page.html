@@ -1,0 +1,37 @@
+<div class="body">
+
+    <ion-header class="header">
+
+        <ion-skeleton-text animated style="position: fixed"></ion-skeleton-text>
+        <div class="icon-header" slot="start" (click)="callReturn()">
+            <img src="./../../../assets/icon/_ionicons_svg_ios-arrow-round-back.svg">
+        </div>
+
+
+    </ion-header>
+
+
+    <ion-content>
+
+        <div class=" cards " *ngFor="let maker of getMakers() ">
+
+            <div class="icon " slot="start ">
+                <img [src]=maker.img>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-elements">
+                    <h3 id="title">
+                        <!-- <ion-skeleton-text animated style="width: 80%; "></ion-skeleton-text> -->
+                        {{maker.name}}
+                    </h3>
+                    <p id="info">
+                        {{maker.info}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+
+</div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Routes, Router } from '@angular/router';
+import { Router } from '@angular/router';
+
+import { AppController } from '../../clazz/app-controller';
 import { CreateCharacterService } from '../../services/create-character.service';
 
 @Component({
@@ -9,7 +11,9 @@ import { CreateCharacterService } from '../../services/create-character.service'
 })
 export class CreateCharacterPage implements OnInit {
 
-  constructor(private router: Router, private createPersonCtrl: CreateCharacterService) { }
+  constructor(
+    private router: Router,
+    private createPersonCtrl: CreateCharacterService) { }
 
   ngOnInit() {
   }
@@ -19,7 +23,8 @@ export class CreateCharacterPage implements OnInit {
   }
 
   getMakers() {
-    return this.createPersonCtrl.getMakers;
+    return AppController.getTranslate.language === AppController.getTranslate.image01 ?
+               this.createPersonCtrl.getMakers.portugues_br : this.createPersonCtrl.getMakers.english;
   }
 
 }

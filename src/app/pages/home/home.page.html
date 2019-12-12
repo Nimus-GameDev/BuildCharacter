@@ -1,6 +1,10 @@
+<ion-header>
+    <div class="header">
+    </div>
+</ion-header>
 <ion-content>
 
-    <ion-card color="primary" (touchstart)="active(card)" *ngFor="let card of getPersons() " class="character">
+    <ion-card color="primary" (click)="active(card)" *ngFor="let card of getCharacters() " class="character">
 
         <div class="character-image">
             <img src="https://c4.wallpaperflare.com/wallpaper/918/556/914/anime-irl-2d-anime-girls-wallpaper-preview.jpg" />
@@ -22,8 +26,12 @@
         </ion-card-content>
     </ion-card>
 
-    <ion-fab-button color="dark" class="create-character" routerLink="/create-character">
-        <ion-icon name="home"></ion-icon>
-    </ion-fab-button>
-
 </ion-content>
+
+<ion-fab-button color="dark" class="create-character" routerLink="/create-character">
+    <ion-icon name="home"></ion-icon>
+</ion-fab-button>
+
+<div class="translate" (click)="changeLanguage()">
+    <img [src]="getLanguange()">
+</div>

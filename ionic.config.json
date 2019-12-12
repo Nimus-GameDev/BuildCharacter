@@ -1,6 +1,8 @@
 {
-  "name": "PersonBuild",
-  "integrations": {},
-  "type": "angular",
-  "id": "9c8e6f70"
+    "name": "BuildCharacter",
+    "integrations": {
+        "cordova": {}
+    },
+    "type": "angular",
+    "id": "9c8e6f70"
 }
